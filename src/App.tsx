@@ -3,38 +3,44 @@ import React from 'react';
 function App() {
   const userName: string = "Amol Shirke";
   {/*
-      How to install any package into react
+      How to install bootstrap react?
+      In last commit we already see how to install any package into react
+      In this commit will see how to install and use bootstrap into React 
     
-      If we want to use any library/package into react we have to install it.
-      To install library/package, npm help us to install the library/package.
-      We can install using 2 ways
-      1. using npm in+
-      stall command
-      2. by adding package into package.json file
+      1. install bootstrap - use below command in terminal
+      `npm install bootstrap`
 
-      before using any of this step we have to identify the package and
-      it version for installtions.
-      we can foind any of the package on official site of npm "https://www.npmjs.com/"
-      we have to search the package which we want to install into our application like bootstrap
+      2. import bootstrap into entry point of react eg. in index.tsx/index.js file
+      import "../node_modules/bootstrap/dist/css/bootstrap.css";
+      import "../node_modules/bootstrap/dist/js/bootstrap";
+      import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 
-      If we want to install bootstrap into our application we can serach bootstrap on npm's web site
-      Then we can select the package from the search result
-      and we can see the installation command at right hand side
-      "npm i bootstrap"
-      just copy it and paste is into the terminal and hit enter
-      This will install bootstrap and we able to see the entry will appear into package.json
-      file as well.
-      and we can do the same installation from package json file as well
-      we just need to add package name with it's version into package.json file and
-      run "npm install" command into terminal
-      "bootstrap": "5.3.7"
+      3. try to use any class from bootstrap in you application eg. row mt-5, text-danger, container etc
+      
   */}
   return (
     <>
-      <h1>Welcome, {userName} to React + Typescript Tutorial</h1>
-      <p>
-        This is paragraph and second HTML tag in this file
-      </p>
+      <div className="row mt-5">
+        <div className="col-12 text-center">
+          <h1>Welcome, {userName} to <span className='text-primary'>React + Typescript Tutorial</span></h1>
+        </div>
+        <div className="col-4">
+          <p className=''>
+            This is paragraph and second HTML tag in this file.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit porro aliquam delectus possimus ea sapiente rerum maxime accusantium, ex commodi?
+          </p>
+        </div>
+        <div className="col-4">
+          <p className=''>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, hic rem dolorem praesentium ab neque consequatur fugiat dignissimos consequuntur reprehenderit repellendus deserunt nobis, nisi veritatis saepe aperiam sequi quos nostrum iste est, ratione explicabo voluptatum nihil. Quo, a, in eos ipsum quas cumque eveniet quos esse pariatur amet debitis totam.
+          </p>
+        </div>
+        <div className="col-4">
+          <p className=''>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error nemo consectetur officia aliquam, quisquam quidem autem fugiat nesciunt laboriosam accusamus quis porro harum vitae minus fuga voluptatibus nostrum odit dolores.
+          </p>
+        </div>
+      </div>
     </>
   );
 }
